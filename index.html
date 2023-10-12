@@ -1,28 +1,39 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Udacity Hut</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/style.css">
-        <style>
-            body {
-                background-color: rgb(209, 68, 68);
-            }
-            .controls {
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
+
+<head>
+    <meta charset="utf-8">
+    <title>Udacity Hut</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: rgb(209, 68, 68);
+        }
+
+        .controls {
+            text-align: center;
+        }
+
+        .pizza-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
 
     <div class="controls">
         <button class="add-pizza">Add Pizza</button>
+        <button class="remove-pizza">Remove Pizza</button>
     </div>
 
     <ul class="pizza-list"></ul>
 
-    
+
     <script src="js/index.js"></script>
-    </body>
+</body>
+
 </html>

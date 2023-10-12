@@ -23,5 +23,14 @@ addPizzaButton.onclick = function () {
     let id = data.lastId + 1;
     data.pizzas.push(id);
     data.lastId = id;
+    data.pizzas.visible = true;
+    render();
+};
+
+const removePizzaButton = document.getElementsByClassName('remove-pizza')[0];
+removePizzaButton.onclick = function () {
+    let id = data.lastId - 1;
+    data.lastId = id;
+    data.pizzas.pop();
     render();
 };
