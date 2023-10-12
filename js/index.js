@@ -12,9 +12,11 @@ function render() {
 
     data.pizzas.forEach(function (value) {
         let liNode = document.createElement('li');
-        let textNode = document.createTextNode(`Pizza ${value}`);
+        liNode.classList.add('li-node');
+        let textNode = document.createTextNode(value);
         liNode.appendChild(textNode);
         pizzaList.appendChild(liNode);
+
     })
 }
 
@@ -27,7 +29,7 @@ addPizzaButton.onclick = function () {
     render();
 };
 
-const removePizzaButton = document.getElementsByClassName('remove-pizza')[0];
+
 removePizzaButton.onclick = function () {
     let id = data.lastId - 1;
     data.lastId = id;

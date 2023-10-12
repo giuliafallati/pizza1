@@ -9,16 +9,38 @@
     <style>
         body {
             background-color: rgb(209, 68, 68);
+            margin: 2em;
         }
 
         .controls {
             text-align: center;
+            margin: 0 auto 1em;
         }
 
         .pizza-list {
             list-style-type: none;
             margin: 0;
             padding: 0;
+        }
+
+        .li-node {
+            background: #FFDC00;
+            border-radius: 50%;
+            display: inline-block;
+            line-height: 100px;
+            text-align: center;
+            width: 100px;
+            margin: .5em;
+        }
+
+        .remove-pizza {
+            background: darkgreen;
+            color: white;
+            padding: 0.25em;
+            text-decoration: none;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
         }
     </style>
 </head>
@@ -27,7 +49,7 @@
 
     <div class="controls">
         <button class="add-pizza">Add Pizza</button>
-        <button class="remove-pizza">Remove Pizza</button>
+        <button class="remove-pizza">X</button>
     </div>
 
     <ul class="pizza-list"></ul>
