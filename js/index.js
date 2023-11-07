@@ -17,7 +17,10 @@ function render() {
         let textNode = document.createTextNode(value);
         liNode.appendChild(textNode);
         pizzaList.appendChild(liNode);
-
+        var removeButton = document.createElement("button");
+        removeButton.id = "removeButtonId";
+        removeButton.innerHTML = "X";
+        liNode.appendChild(removeButton);
     })
 }
 
@@ -32,7 +35,7 @@ addPizzaButton.onclick = function () {
 };
 
 
-const removePizzaButton = document.getElementsByClassName('remove-pizza')[0];
+const removePizzaButton = document.getElementById('removeButtonId');
 removePizzaButton.onclick = function () {
     if (currentPizza >= 1) {
         let id = data.lastId - 1;
