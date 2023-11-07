@@ -10,18 +10,18 @@ function render() {
     while (pizzaList.lastElementChild) {
         pizzaList.removeChild(pizzaList.lastElementChild);
     }
-
     data.pizzas.forEach(function (value) {
+
         let liNode = document.createElement('li');
         liNode.classList.add('li-node');
         let textNode = document.createTextNode(value);
         liNode.appendChild(textNode);
-        pizzaList.appendChild(liNode);
-        var removeButton = document.createElement("button");
-        removeButton.id = "removeButtonId";
-        removeButton.innerHTML = "X";
-        liNode.appendChild(removeButton);
+        pizzaList.appendChild(liNode)
+
     })
+
+    let removeButton = document.getElementById("remove-button");
+    pizzaList.appendChild(removeButton)
 }
 
 const addPizzaButton = document.getElementsByClassName('add-pizza')[0];
@@ -34,8 +34,7 @@ addPizzaButton.onclick = function () {
     render();
 };
 
-
-const removePizzaButton = document.getElementById('removeButtonId');
+const removePizzaButton = document.getElementsByClassName('remove-button')[0];
 removePizzaButton.onclick = function () {
     if (currentPizza >= 1) {
         let id = data.lastId - 1;

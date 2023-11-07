@@ -33,8 +33,7 @@
             margin: .5em;
         }
 
-        
-        #removeButtonId {
+        .remove-button {
             background: darkgreen;
             color: white;
             padding: 0.25em;
@@ -43,6 +42,13 @@
             height: 30px;
             width: 30px;
         }
+
+        .add-pizza {
+            background: darkgreen;
+            color: white;
+            height: 30px;
+            width: 90px;
+        }
     </style>
 </head>
 
@@ -50,11 +56,10 @@
 
     <div class="controls">
         <button class="add-pizza">Add Pizza</button>
-        
     </div>
 
     <ul class="pizza-list"></ul>
-
+    <button class="remove-button" id="remove-button">X</button>
 
     <script src="js/index.js"></script>
 </body>
